@@ -74,7 +74,7 @@
 ![](https://i.imgur.com/wLZTpyv.png) 
 ![](https://i.imgur.com/HVkgHPu.png) 
 ![](https://i.imgur.com/wPKCnQ3.png)
-| ![](https://i.imgur.com/NyYwghK.png) 
+![](https://i.imgur.com/NyYwghK.png) 
 ![](https://i.imgur.com/VDLDOnW.png) 
 ![](https://i.imgur.com/nR47VUG.png) 
 ![](https://i.imgur.com/yMf1POg.png) 
