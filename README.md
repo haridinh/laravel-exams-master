@@ -1,79 +1,130 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Ứng dụng Trắc nghiệm - Laravel Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Thông tin sinh viên
+- **Họ tên:** Đinh Bá Hải  
+- **Mã sinh viên:** 22010126  
+- **Tên dự án:** Ứng dụng Trắc nghiệm Online
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Mô tả dự án
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ứng dụng xây dựng bằng **Laravel** với mục tiêu tạo nền tảng thi trắc nghiệm trực tuyến, bao gồm:
+- Quản lý bài thi, câu hỏi, đáp án.
+- Tài khoản quản trị và thí sinh.
+- Chức năng làm bài, tự động chấm điểm, xuất kết quả.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 1. Sơ đồ cấu trúc hệ thống (Class Diagram)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Class Diagram](https://i.imgur.com/RMcwXfm.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 2. Thuật toán & Quy trình hoạt động
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 🛠️ Quản trị viên (Admin)
+- **Quản lý bài thi:** Tạo, sửa, xóa, hiển thị danh sách bài thi.
+- **Quản lý câu hỏi:** Gắn câu hỏi và đáp án vào từng bài thi.
+- **Quản lý thí sinh:** Tạo/sửa/xóa danh sách người dùng dạng thí sinh.
+- **Thống kê:** Xem kết quả, lịch sử làm bài, to-do list,...
+  
+![Admin Activity](https://i.imgur.com/fE0mokk.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+---
 
-## Contributing
+### Thí sinh (User/Student)
+- **Làm bài thi:**  
+  - Đăng nhập hệ thống.  
+  - Chọn bài thi có hiệu lực.  
+  - Trả lời từng câu hỏi (trắc nghiệm 1 lựa chọn).  
+  - Gửi kết quả.  
+- **Chấm điểm:**  
+  - Hệ thống tự động tính điểm, đánh giá đậu/rớt.  
+  - Hiển thị kết quả.
+  - Có thể **xuất ra file CSV** để lưu trữ.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![Student Activity](https://i.imgur.com/qgLGUNH.png)
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Thuật toán xử lý chính
 
-## Security Vulnerabilities
+#### A. **Chấm điểm bài thi**
+1. Khi thí sinh nộp bài:
+   - Lấy danh sách các câu trả lời đã chọn.
+   - Kiểm tra đúng/sai, cộng điểm tương ứng theo `degree` mỗi câu.
+   - Lưu kết quả từng câu hỏi vào bảng `results`.
+   - Tính tổng điểm, xác định đậu/rớt (>= 50% điểm tối đa).
+   - Ghi tổng điểm và trạng thái vào hồ sơ thí sinh.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### B. **CRUD chuẩn Laravel**
+- Áp dụng mô hình CRUD (Create, Read, Update, Delete) cho:
+  - Bài thi (Exam)
+  - Câu hỏi (Question)
+  - Đáp án (Answer)
+  - Thí sinh (Student)
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🖼️ 3. Giao diện minh họa
+
+| Quản lý bài thi | Thêm câu hỏi | Giao diện thí sinh | Kết quả thi | ... |
+|----------------|--------------|---------------------|-------------|-----|
+| ![](https://i.imgur.com/VrsZrIU.png) | ![](https://i.imgur.com/8HNMeml.png) | ![](https://i.imgur.com/wLZTpyv.png) | ![](https://i.imgur.com/HVkgHPu.png) | ![](https://i.imgur.com/wPKCnQ3.png) |
+| ![](https://i.imgur.com/NyYwghK.png) | ![](https://i.imgur.com/VDLDOnW.png) | ![](https://i.imgur.com/nR47VUG.png) | ![](https://i.imgur.com/yMf1POg.png) | ![](https://i.imgur.com/JRTkYIk.png) |
+
+---
+
+## 4. Code xử lý logic chính
+
+**File:** `app/Http/Controllers/User/HomeController.php`
+
+```php
+public function quizResult(Request $request) {
+    if ($request->ajax()) {
+        $collect = [];
+        $dataIn = $request->all();
+        $exam = Exam::find($request->examId);
+        unset($dataIn['_token'], $dataIn['examId']);
+        foreach($dataIn as $item) {
+            $answer = Answer::find($item);
+            $questionDegree = $answer->question->degree;
+            $answerDegree = $answer->status ? $questionDegree : 0;
+            $collect[] = $answerDegree;
+
+            $result = new Result();
+            $result->studentId = Auth::id();
+            $result->examId = $exam->id;
+            $result->questionId = $answer->question->id;
+            $result->answerId = $answer->id;
+            $result->degree = $answerDegree;
+            $result->save();
+        }
+
+        $this->saveStudentDegree($collect, $exam);
+
+        $result = $this->generateResultSnippet($exam, $dataIn, $collect);
+        return response()->json([
+            'result' => json_encode($result, JSON_INVALID_UTF8_IGNORE)
+        ], Response::HTTP_OK);
+    }
+}
+- Giải thích:
+    - Nhận dữ liệu làm bài từ giao diện AJAX.
+    - Kiểm tra đáp án đúng/sai, tính điểm cho từng câu.
+    - Lưu từng kết quả vào bảng results.
+    - Tính tổng điểm => xác định đậu/rớt.
+    - Trả kết quả về frontend để hiển thị.
+
+---
+
+## 5. Kết nối & Triển khai
+- Không sử dụng cloud db.
+- Sử dụng các bảo mật & quy ước.
+
+---
+
+## 6. Link repo:
+https://github.com/haridinh/laravel-exams-master.git
