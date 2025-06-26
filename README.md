@@ -68,7 +68,7 @@
 
 ---
 
-## 🖼️ 3. Giao diện minh họa
+## 3. Giao diện minh họa
 
 | Quản lý bài thi | Thêm câu hỏi | Giao diện thí sinh | Kết quả thi | ... |
 |----------------|--------------|---------------------|-------------|-----|
@@ -111,6 +111,7 @@ public function quizResult(Request $request) {
         ], Response::HTTP_OK);
     }
 }
+```
 - Giải thích:
     - Nhận dữ liệu làm bài từ giao diện AJAX.
     - Kiểm tra đáp án đúng/sai, tính điểm cho từng câu.
