@@ -122,7 +122,7 @@ public function quizResult(Request $request) {
     - Kiểm tra đáp án đúng/sai, tính điểm cho từng câu.
     - Lưu từng kết quả vào bảng results.
     - Tính tổng điểm => xác định đậu/rớt.
-    - Trả kết quả về frontend để hiển thị.
+    - Trả kết quả về frontend để hiển thị
 
 ---
 
